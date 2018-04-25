@@ -7,4 +7,9 @@ describe('<GuessCount />', () => {
     it('Renders without crashing', () =>{
         shallow(<GuessCount />)
     });
+    it('Gives correct guess count', () =>{
+        const value =10;
+        const shallowRender = shallow(<GuessCount guessCount={value} />);
+        expect(shallowRender.text()).toEqual(`You've made ${value} guesses!`);
+    })
 });

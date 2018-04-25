@@ -7,4 +7,9 @@ describe('<Feedback />', () => {
     it('Renders without crashing', () =>{
         shallow(<Feedback />)
     });
+    it('Should give some feedback.' , () =>{
+        const feedback = "this is feedback";
+        const shallowRender = shallow(<Feedback feedback={feedback} />);
+        expect(shallowRender.contains(feedback)).toEqual(true);
+    })
 });

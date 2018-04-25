@@ -7,4 +7,9 @@ describe('<GuessList />', () => {
     it('Renders without crashing', () =>{
         shallow(<GuessList guesses={[]} />)
     });
+    it('shows a list of guesses', () =>{
+        const list = [1, 2,3];
+        const shallowRender = shallow(<GuessList guesses={list} />);
+
+    })
 });
